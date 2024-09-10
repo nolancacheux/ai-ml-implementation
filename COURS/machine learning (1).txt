@@ -1,0 +1,80 @@
+
+Machine Learning : Une capacité à apprendre des résultats
+
+Le machine learning, ou apprentissage automatique, est la capacité des machines à apprendre à partir de données et de résultats observés, plutôt que d'être explicitement programmées avec des règles fixes. Cela contraste avec la programmation traditionnelle, où le programmeur doit définir explicitement chaque règle.
+
+Différence avec la programmation traditionnelle
+
+Programmation traditionnelle : 
+Dans un système traditionnel, les développeurs fournissent des instructions spécifiques au programme (un algorithme) et des données d'entrée. Le programme exécute alors les instructions pour générer des résultats.
+Exemple : Pour calculer la moyenne entre deux nombres x et y, le programme est défini ainsi :  
+    moyenne = (x + y) / 2
+Ici, la machine suit simplement la règle donnée.
+
+Machine Learning : 
+En apprentissage automatique, on ne donne pas directement les règles à la machine. On lui fournit plutôt un ensemble d'exemples (données d'entrée et de sortie), et la machine doit déduire elle-même les règles à partir de ces exemples.
+Exemple : Si on fournit des paires de données comme x = 2, y = 4, et moyenne = 3, la machine générera son propre modèle pour calculer la moyenne.
+
+Un autre exemple : Admission à l’université
+
+Programmation traditionnelle : On écrit un programme avec des conditions spécifiques pour accepter ou rejeter un étudiant selon ses qualifications.  
+    if condition:
+        accepter
+    else:
+        rejeter
+
+Machine Learning : Ici, on fournit un historique d’admissions (étudiants acceptés ou rejetés) comme exemples. La machine apprend à partir de ces décisions et crée un modèle capable de prédire automatiquement l'acceptation ou le rejet pour les futurs étudiants.
+
+Apprentissage supervisé et non supervisé
+
+Apprentissage supervisé : 
+Dans ce type d’apprentissage, un « enseignant » est présent. Cela signifie que pour chaque exemple donné à la machine, l'étiquette (ou résultat attendu) est également fournie. La machine apprend en comparant ses prédictions avec ces résultats.
+Exemple : On fournit à la machine un ensemble d'images d'animaux avec leurs noms, et elle apprend à identifier les animaux sur de nouvelles images.
+
+Apprentissage non supervisé : 
+Ici, il n'y a pas d'enseignant. On donne uniquement des données d’entrée sans étiquette, et la machine doit trouver des structures cachées ou des patterns dans ces données.
+Exemple : On donne à la machine un ensemble d'images sans étiquettes, et elle apprend à grouper celles qui sont similaires (clustering).
+
+Termes clés :
+
+Label : C’est le résultat attendu ou la sortie désirée pour un exemple (comme le nom de l’animal dans une image).
+Attributs : Les caractéristiques ou les descripteurs utilisés pour représenter un exemple (comme la couleur, la taille, etc.).
+Instances : Ce sont les exemples individuels dans un ensemble de données (comme une image d’un chat ou un ensemble de caractéristiques numériques).
+
+Les deux phases du Machine Learning
+
+1. Phase d'apprentissage (Training phase) : C’est la phase où le modèle est construit. Le modèle utilise les exemples (données d’entrée et résultats) pour apprendre les règles sous-jacentes.
+2. Phase d'inférence (Inferencing phase) : Une fois le modèle appris, il peut être utilisé pour faire des prédictions sur de nouvelles données.
+
+Performance des cartes graphiques dans le Machine Learning
+
+Les cartes graphiques (GPU) jouent un rôle crucial dans le machine learning moderne, en particulier pour l'entraînement de grands modèles. Par exemple :
+- Une carte NVIDIA V100 peut équivaloir à 405 ans d’apprentissage sur un ordinateur classique.
+- Pour entraîner GPT-3, des milliers de GPU V100 ont été utilisés pendant plusieurs mois pour compléter l’entraînement du modèle.
+
+Les trois grandes catégories du Machine Learning
+
+1. Apprentissage supervisé : 
+    - Ce type d’apprentissage est utilisé pour les problèmes de classification (prédire des catégories) ou de régression (prédire des valeurs continues).  
+    - Exemple : Prédire la température de demain (régression), ou prédire si le temps sera chaud ou froid (classification).
+  
+2. Apprentissage non supervisé : 
+    - Ici, les problèmes concernent des tâches comme le clustering (regrouper des données similaires) ou la réduction de dimensionnalité (simplifier les données tout en conservant leur structure).
+    - Exemple : Regrouper des clients similaires en fonction de leur comportement d'achat sans savoir à l'avance leurs catégories.
+
+3. Apprentissage par renforcement : 
+    - Contrairement aux deux autres, ici, il n'y a ni étiquette, ni ensemble d'entrées pré-définies. L'agent apprend par essai-erreur, en recevant des récompenses ou des punitions en fonction de ses actions.
+    - Exemple : Enseigner à un robot à marcher, où chaque mouvement correct ou incorrect reçoit une récompense ou une pénalité.
+
+Exemples pratiques et ressources
+
+- adamharley.com : Un excellent site pour découvrir des exemples de deep learning en pratique.
+  
+- Régression linéaire : Un exemple de modèle prédictif qui tente de prédire une valeur continue (comme la température de demain).
+    Exemple dans VS Code :
+    from sklearn.linear_model import LinearRegression
+    model = LinearRegression()
+    model.fit(X, y)
+
+- Classification : Un modèle de classification cherche à prédire des catégories distinctes.
+    Exemple : Prédire si demain sera chaud ou froid, basé sur des données historiques de température.
