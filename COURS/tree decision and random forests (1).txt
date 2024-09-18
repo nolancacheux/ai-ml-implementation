@@ -1,0 +1,77 @@
+1. Arbre de Décision (Decision Tree)
+Un arbre de décision est un modèle de machine learning supervisé qui fonctionne comme une série de questions ou de choix. Chaque "noeud" dans l'arbre représente une question sur une caractéristique de l'exemple à classer ou sur lequel on veut faire une prédiction. En fonction de la réponse à chaque question, on avance dans l'arbre jusqu'à arriver à une conclusion (feuille), qui est la prédiction finale.
+
+Comment ça marche ?
+L’arbre de décision pose des questions et à chaque réponse, il réduit les options possibles. On part de la racine (le début de l'arbre), où une première question est posée, puis on se déplace dans l’arbre en fonction des réponses (branches) pour finir à une feuille (le résultat final).
+
+Exemple développé : Prédire si quelqu’un va jouer au tennis
+Imaginons que tu veux créer un modèle qui prédit si une personne va jouer au tennis en fonction de plusieurs conditions météorologiques : le temps, la température, l'humidité, et le vent.
+
+Ton jeu de données pourrait ressembler à ceci :
+
+Temps	Température	Humidité	Vent	Jouer ?
+Ensoleillé	Chaud	Haute	Faible	Non
+Ensoleillé	Chaud	Haute	Fort	Non
+Nuageux	Tempéré	Haute	Faible	Oui
+Pluvieux	Froid	Normal	Fort	Non
+Pluvieux	Froid	Normal	Faible	Oui
+
+Comment l’arbre fonctionne ?
+
+Première question : Quelle est la météo ?
+
+Si c’est "Ensoleillé", l’arbre pose une deuxième question.
+Si c’est "Nuageux", la personne joue au tennis (car dans l’exemple, elle a toujours joué quand il faisait nuageux).
+Si c’est "Pluvieux", une autre question est posée sur le vent.
+Deuxième question (si Ensoleillé) : Quelle est l’humidité ?
+
+Si l’humidité est haute, la personne ne joue pas.
+Si l’humidité est basse, la personne joue.
+Troisième question (si Pluvieux) : Y a-t-il du vent ?
+
+S’il y a du vent, la personne ne joue pas.
+S’il n’y a pas de vent, la personne joue.
+Chaque question divise les données en sous-ensembles de plus en plus petits jusqu'à ce qu'il n'y ait plus de questions à poser et qu'une décision finale soit atteinte (jouer ou ne pas jouer).
+
+Avantages de l’arbre de décision :
+
+Facile à comprendre et à visualiser. Il fonctionne comme une série de décisions logiques que l’on peut suivre facilement.
+Interprétable. On peut comprendre pourquoi une décision a été prise simplement en suivant les étapes de l’arbre.
+Limites :
+
+Les arbres de décision simples peuvent être sujets à l’overfitting, c’est-à-dire qu’ils peuvent devenir trop spécifiques aux données d'entraînement et ne pas bien généraliser sur de nouvelles données.
+
+
+2. Forêt Aléatoire (Random Forest)
+La forêt aléatoire est une méthode d'apprentissage supervisé qui combine plusieurs arbres de décision. Contrairement à un arbre de décision unique, une forêt aléatoire crée une "forêt" de nombreux arbres qui fonctionnent ensemble. L’idée est que plusieurs arbres qui prennent chacun des décisions légèrement différentes peuvent, lorsqu’ils sont combinés, donner une meilleure prédiction.
+
+Comment ça marche ?
+Création de plusieurs arbres de décision : Chaque arbre est construit en utilisant un sous-ensemble aléatoire des données d'entraînement (ce processus est appelé "bagging"). De plus, à chaque noeud de l’arbre, on ne considère qu’un sous-ensemble aléatoire des caractéristiques disponibles, ce qui réduit la corrélation entre les arbres.
+
+Agrégation des prédictions : Lorsque la forêt fait une prédiction, chaque arbre de décision dans la forêt fait sa propre prédiction. La forêt aléatoire agrège ces prédictions :
+
+Pour la classification, elle prend la prédiction la plus fréquente (vote majoritaire).
+Pour la régression, elle prend la moyenne des prédictions des arbres.
+Exemple développé : Reprenons l'exemple du tennis
+Dans une forêt aléatoire, au lieu de construire un seul arbre de décision, nous allons créer plusieurs arbres (par exemple, 100 arbres) en utilisant différentes combinaisons de données et de caractéristiques.
+
+Premier arbre : Utilise le temps et l'humidité pour faire des prédictions. Il pourrait dire qu'une personne jouera si le temps est nuageux et que l'humidité est basse.
+Deuxième arbre : Utilise la température et le vent pour faire des prédictions. Il pourrait dire qu'une personne ne jouera pas si la température est élevée et qu'il y a du vent.
+Troisième arbre : Utilise le temps et la température pour faire des prédictions.
+Ces 100 arbres prennent chacun une décision, puis la forêt aléatoire agrège les résultats. Si la majorité des arbres disent que la personne va jouer, alors la prédiction finale est "jouer". Sinon, ce sera "ne pas jouer".
+
+Avantages de la forêt aléatoire :
+
+Réduction du surapprentissage (overfitting) : Comme plusieurs arbres sont combinés, cela réduit la chance qu'un arbre spécifique fasse une erreur sur les données d’entraînement.
+Précision : La forêt aléatoire est généralement plus précise que les arbres de décision individuels car elle utilise la force de plusieurs modèles.
+Limites :
+
+Moins interprétable qu'un arbre de décision individuel : Avec des centaines d'arbres dans la forêt, il devient difficile de comprendre exactement pourquoi une prédiction a été faite.
+Coûteux en calcul : Entraîner et utiliser une forêt aléatoire demande plus de ressources en calcul que de travailler avec un seul arbre.
+Comparaison simple
+Arbre de décision : C'est un modèle simple, où chaque décision est prise de manière séquentielle, comme poser des questions pour arriver à une réponse.
+Forêt aléatoire : C'est un ensemble de nombreux arbres de décision. Chaque arbre prend une décision différente, et la forêt combine toutes ces décisions pour donner un résultat plus précis.
+Résumé :
+
+Si tu utilises un seul arbre, il est simple à comprendre mais peut être moins précis.
+Si tu utilises une forêt aléatoire, tu auras des prédictions plus robustes et précises, mais au prix d’une plus grande complexité.
