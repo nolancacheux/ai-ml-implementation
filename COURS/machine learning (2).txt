@@ -1,0 +1,14 @@
+Dimensionality Reduction
+
+•summarization of data (n examples) with many dimensions
+(m attributes) by a smaller set of (p) derived (synthetic, composite) 
+dimension
+
+exemple : 
+
+1 2
+2 4
+3 6
+4 8 
+9 18 peut etre simplifié en 1 colonne car la deuxieme n'apporte aucune information c'est juste un x2
+
