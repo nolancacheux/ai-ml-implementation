@@ -1,0 +1,35 @@
+NN - Exam Method:
+
+Example with Neural Network Heart Classification
+
+The goal is to write a neural network classifier for this problem, analyzing the data to predict the last column, which contains values of either 0 or 1.
+
+We split the dataset into two parts: even rows for training and odd rows for validation.
+
+Steps:
+    1) Load the dataset
+
+    2) Clean the data by removing the first column.
+
+    3) Split the dataset into training and validation sets:
+
+    Even rows for training: data[::2, :] (rows 0, 2, 4, etc.)
+    Odd rows for validation: data[1::2, :] (rows 1, 3, 5, etc.)
+
+    4) Describe / Define the model :
+
+        In this case: Binary Classification, with 13 input features and 1 output.
+
+        Neural Network Examples:
+            - Regression: Linear activation function.
+            - Classification:
+                Binary classification: One node with Sigmoid activation (returns a probability between 0 and 1).
+                Multiclass classification: Softmax activation (used when predicting multiple categories, e.g., dog, cat, horse in an image).
+                Multilabel classification: Sigmoid activation (for independent predictions of multiple labels).
+    
+
+    5) Display training and validation history:
+        
+        Plot the training and validation curves.
+
+    6)Evaluate the accuracy on the validation set.
