@@ -143,3 +143,8 @@ NN for Classification :
     Binary classification : One node : Sigmoid ( like probability , between 0 and 1 function)
     Multiclass Classification : Softmax Activation (when you search for multiple things , example a dog , a cat , a horse in a photo)
     Multilabel Classification : Sigmoid Activation
+
+
+The Adam optimizer is used to adjust the weights.
+The MSE (Mean Square Error)loss function is used to measure the error between predictions and actual values.
+Le paramètre batch_size spécifie le nombre d'échantillons qui seront propagés à travers le réseau en une seule fois.
