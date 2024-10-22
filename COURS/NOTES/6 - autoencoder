@@ -1,0 +1,33 @@
+middle is called 
+Latence space with 2 neurons 
+PROGRESSIVE GROWING OF GANS FOR IMPROVED QUALITY: https://youtu.be/G06dEcZ-QTg
+
+### Autoencoder
+### Type of artificial neural network used for unsupervised learning. Autoencoders are designed to learn efficient codings of input data, typically for the purpose of dimensionality reduction or feature extraction.
+
+### Objectives
+
+- **Dimensionality Reduction**: Reduce the number of features in the dataset while preserving important information.
+- **Feature Learning**: Automatically learn useful features from the input data.
+- **Anomaly Detection**: Identify unusual patterns that do not conform to expected behavior.
+
+### Components
+
+- **Encoder**: Compresses the input data into a lower-dimensional representation.
+- **Latent Space**: The compressed representation of the input data.
+- **Decoder**: Reconstructs the input data from the lower-dimensional representation.
+
+### Applications
+
+- **Data Compression**: Reducing the size of data for storage and transmission.
+- **Denoising**: Removing noise from data.
+- **Image Processing**: Enhancing and reconstructing images.
+- **Clustering**: Grouping similar data points together based on learned features.
+
+### Implementation Steps
+
+1. **Data Preprocessing**: Prepare the dataset for training.
+2. **Model Architecture**: Define the encoder and decoder neural network layers.
+3. **Training**: Train the autoencoder on the dataset.
+4. **Evaluation**: Assess the performance of the autoencoder.
+5. **Visualization**: Visualize the results, such as the reconstructed data and latent space.
