@@ -83,7 +83,7 @@ Lien : https://playground.tensorflow.org/
 Concepts supplémentaires :
 
 Epoch :
-Une passe complète à travers le jeu de données d'entraînement.
+Une itération complète à travers le jeu de données d'entraînement.
 
 Learning Rate :
 Détermine à quelle vitesse le modèle ajuste les poids pendant l'entraînement.
@@ -143,3 +143,12 @@ NN for Classification :
     Binary classification : One node : Sigmoid ( like probability , between 0 and 1 function)
     Multiclass Classification : Softmax Activation (when you search for multiple things , example a dog , a cat , a horse in a photo)
     Multilabel Classification : Sigmoid Activation
+
+
+The Adam optimizer is used to adjust the weights.
+The MSE (Mean Square Error)loss function is used to measure the error between predictions and actual values.
+Le paramètre batch_size spécifie le nombre d'échantillons qui seront propagés à travers le réseau en une seule fois.
+
+NN for clustering : inputs and outputs are same , we expect that the NN reconstructs the inputs and return them as outputs
+    Before middle : Encoding
+    After middle : Decoding
